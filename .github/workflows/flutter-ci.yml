@@ -41,3 +41,8 @@ jobs:
 
       - name: Build debug APK
         run: flutter build apk --debug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: fc-career-mode-apk
+          path: fc_career_mode/build/app/outputs/flutter-apk/*.apk
